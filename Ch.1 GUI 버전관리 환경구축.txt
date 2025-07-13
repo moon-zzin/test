@@ -1,0 +1,51 @@
+### Ch.1 GUI 버전관리 환경구축
+
+# 소스트리
+: Git과 Mercurial 저장소를 GUI로 관리할 수 있게 도와주는 무료 툴
+
+Local	
+: 내 컴퓨터에 있는 Git 저장소를 관리하는 탭
+Remote
+: 원격 저장소를 연동해서 목록을 가져오고 clone 받을 수 있는 탭
+Clone
+: GitHub 저장소 주소(URL)를 넣어 내 컴퓨터로 복사하는 탭
+Add
+: 이미 내 컴퓨터에 있는 로컬 저장소 등록하는 탭
+Create
+: 새로운 Git 저장소를 만들고 초기화하는 탭 → 비어 있는 폴더에서 .git 생성
+
+---
+
+# 깃허브
+
+Owner			저장소 소유자, 보통 본인 계정으로 설정
+Description			프로젝트 설명을 간단히 작성 (optional)
+Public			누구나 저장소 내용을 볼 수 있음
+Private			본인과 초대한 사람만 접근 가능
+Add a README file	저장소를 초기화하면서 README.md 파일 생성
+Add .gitignore		.Git이 추적하지 않을 파일 정의
+Choose a license		오픈소스 라이선스를 선택할 수 있는 항목
+
+.gitignore 파일
+: Git이 무시(=추적하지 않음) 해야 하는 파일들을 명시해두는 설정 파일
+
+Python	*.pyc, __pycache__/, .env
+Node		node_modules/, .env
+C++		*.o, *.exe, build/
+Unity		Library/, Temp/, Logs/
+
+License
+: “이 저장소의 코드를 다른 사람들이 어떻게 사용할 수 있는지”를 명확히 정해주는 규칙
+
+아무 라이선스가 없으면 법적으로 코드를 자유롭게 사용할 수 없음
+오픈소스 저장소라도 라이선스 없으면 사용자가 불안함
+협업/공유/배포를 할 때는 반드시 명확한 라이선스를 명시하는 것이 안전
+
+MIT			가장 자유로운 라이선스
+Apache 2.0		MIT처럼 자유롭지만, 특허 조항도 포함되어 있음
+GPL			수정한 버전도 무조건 공개(오픈소스) 해야 함
+BSD			MIT와 비슷하게 자유로움
+None			아무 라이선스를 적용하지 않음 → 사실상 사용 금지
+
+
+
