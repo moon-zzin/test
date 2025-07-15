@@ -1,0 +1,40 @@
+### Ch.2 혼자서 Git으로 버전 관리
+
+# Git의 저장 방식: 스냅샷 vs 델타
+
+스냅샷 (Snapshot)
+: 파일 전체의 상태(버전) 저장
+
+파일이 변경되었을 경우 그 파일의 전체 내용 저장
+변경되지 않은 파일은 이전 버전의 파일 참조 → 복사 X
+
+델타 (Delta)
+: 변경된 부분만 저장
+
+
+Git이 스냅샷 기반을 사용하는 이유
+→ 브랜치와 병합이 빠르고 효율적
+→ 히스토리 관리가 간단하고 신뢰성 높음
+→ 사용자 입장에서 "파일 전체 버전"을 다룬다는 직관적인 구조
+
+---
+
+# 파일 상태 
+
+Untracked
+: Git이 아직 관리하고 있지 않은 새 파일 
+
+Unmodified
+: 최근 커밋 이후 수정되지 않은 상태 
+Modified
+: 커밋 이후 파일 내용을 변경한 상태 
+
+Staged
+: Git이 커밋 대상으로 지정한 상태
+
+Untracked → Staged	git add
+Modified → Staged	git add
+Staged → Committed	git commit
+ 
+
+
